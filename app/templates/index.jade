@@ -1,0 +1,21 @@
+doctype html
+html(lang="es")
+  head
+    title Marcelo López
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='theme-color', content='')
+    <meta name="theme-color" content="#D71E00">
+    link(rel='stylesheet', href='./css/main.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Anton|PT+Sans+Narrow:400,700', type='text/css')
+  body
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    include ./slide1.jade
+    include ./slide2.jade
+    include ./slide3.jade
+    include ./slide4.jade
+    include ./slide5.jade
+
+    script(src='./lib/zepto/zepto.min.js')
+    script(src='./js/app.js')

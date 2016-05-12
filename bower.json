@@ -1,0 +1,21 @@
+{
+  "name": "marcelo",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "jonathan <jonathan.garrido1988@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Jonathangarrido/marcelo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "zepto": "^1.1.6"
+  }
+}

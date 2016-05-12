@@ -1,0 +1,30 @@
+/*------------------------------------
+    ·CLASES
+    ------------------------------------*/
+.centrador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txt-center{
+  text-align: center;
+}
+.fullScreen{
+  width: 100vw;
+  height: 100vh;
+}
+.flex{
+  display: flex;
+}
+
+.container{
+  @include max-width($pagemaxwidth);
+}
+
+
+.h1{
+  font-size: 1.8rem;
+  @include respond-to(l){
+    font-size: 2.8rem;
+  }
+}
