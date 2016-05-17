@@ -1,0 +1,137 @@
+@include respond-to(l){
+
+  .slide2{
+    background-image: url('#{$image-dir}/fondo-politicos.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100rem;
+    &>div{
+      padding: 3rem;
+    }
+    h2{
+      text-align: center;
+      font-size: 2.4rem;
+    }
+    .list{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .slide3{
+    padding: 0;
+    height: 100vh;
+  }
+
+  .slide4{
+    padding: 0;
+    height: 90rem;
+    background-image: url('#{$image-dir}/fondo-semiotica.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    &>div{
+      padding-top: 15rem;
+    }
+    &-1{
+      opacity: 0;
+      transition: $animation;
+      div:first-child{
+        padding-right: 2rem;
+      }
+      div:last-child{
+        padding-left: 2rem;
+      }
+    }
+    &-2{
+      opacity: 0;
+      transition: $animation;
+      h2{
+        margin-top: 0;
+        margin-bottom: 3rem;
+      }
+      div:nth-child(2){
+        padding-right: 2rem;
+      }
+      div:last-child{
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  .slide5{
+    padding: 0;
+    height: 100vh;
+    div{
+      border: .5rem #000 solid;
+      padding: 2rem 5rem;
+    }
+    p{
+      font-size: 3.5rem;
+    }
+    span{
+      font-size: 1.3rem;
+    }
+  }
+
+  .slide6{
+    background-image: url('#{$image-dir}/fondo-martin.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    p{
+      font-size: 1.4rem;
+    }
+    &>div:first-child{
+      padding: 15rem 1rem;
+    }
+    &-1{
+      justify-content: flex-end;
+      opacity: 0;
+      transition: $animation;
+      p{
+        text-align: right;
+        max-width: 13rem;
+      }
+    }
+    &-2{
+      margin-top: 10rem;
+      opacity: 0;
+      transition: $animation;
+      p{
+        text-align: left;
+        max-width: 13rem;
+      }
+    }
+    &-3{
+      justify-content: space-between;
+      flex-direction: row;
+      p{
+        width: 14rem;
+        height: 100vh;
+        padding: 0 2rem 0;
+        transition: $animation;
+      }
+      &-left{
+        margin-left: -50%;
+      }
+      &-right{
+        margin-right: -50%;
+      }
+    }
+  }
+}
+
+.fade-in{
+  opacity: 1;
+}
+.slide-left{
+  margin-left: 0;
+}
+.slide-right{
+  margin-right: 0;
+}

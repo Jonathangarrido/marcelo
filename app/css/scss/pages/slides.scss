@@ -2,8 +2,8 @@
     ·SLIDES
     ------------------------------------*/
 .slides{
-  
 }
+
 .slide1{
   background-color: $color-base;
   &>div{
@@ -32,35 +32,16 @@
 .slide2{
   background-color: black;
 
-  @include respond-to(l){
-    background-image: url('#{$image-dir}/fondo-politicos.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 80rem;
-  }
   &>div{
     background-color: black;
     padding: 5rem 1rem;
-    @include respond-to(l){
-      padding: 3rem;
-    }
   }
   h2{
     text-align: left;
     font-size: 1.5rem;
-    @include respond-to(l){
-      text-align: center;
-      font-size: 2.4rem;
-    }
   }
   .list{
     flex-direction: column;
-    @include respond-to(l){
-      flex-direction: row;
-      justify-content: space-between;
-    }
   }
   ul{
     margin-top: 1rem;
@@ -70,10 +51,6 @@
 .slide3{
   background-color: $color-base;
   padding: 5rem 1rem;
-  @include respond-to(l){
-    padding: 0;
-    height: 60rem;
-  }
   p{
     font-family: $altfont ;
   }
@@ -84,22 +61,101 @@
 
 .slide4{
   background-color: black;
-  padding: 5rem 1rem;
-  @include respond-to(l){
-    padding: 0;
-    height: 80rem;
-    background-image: url('#{$image-dir}/fondo-semiotica.jpg');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    background-attachment: fixed;
+  padding: 5rem 0;
+  &-1{
+    span{
+      color: orange;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    p{
+      margin-bottom: .5rem;
+    }
+    div:first-child{
+      padding-right: .5rem;
+    }
+  }
+  &-2{
+    span{
+      color: red;
+      display: block;
+    }
+    h2{
+      font-family: $basefont;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    div:nth-child(2){
+      padding-right: .5rem;
+    }
   }
 }
+
 .slide5{
   background-color: $color-base;
-  padding: 5rem 1rem;
-  @include respond-to(l){
-    padding: 0;
-    height: 40rem;
+  padding: 5rem 0;
+  color: #000;
+  div{
+    background-color: #fff;
+    border: .25rem #000 solid;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  p{
+    font-size: 2rem;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  span{
+    display: block;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 }
+
+.slide6{
+  padding: 4rem 0 0;
+  background-color: black;
+  p{
+    font-size: 1.2rem;
+  }
+  &>div:first-child{
+    padding: 0 1rem;
+  }
+  &-1{
+    p{
+      text-align: center;
+      width: 100%;
+    }
+    
+  }
+  &-2{
+    margin-top: 4rem;
+    p{
+      text-align: center;
+      width: 100%;
+    }
+  }
+  &-3{
+    flex-direction: column;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    p{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem 0;
+      background-color: #fff;
+      color: #000;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
