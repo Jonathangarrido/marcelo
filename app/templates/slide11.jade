@@ -1,0 +1,52 @@
+mixin lista
+  each item, id in {1:'evo',2:'cristina',3:'maduro',4:'santos'}
+    div(class="c50-s c25-l c-hidden-l "+'slide11-dual-'+id)
+      img(src="./images/"+item+".jpg", alt="")
+
+section.slides.slide11.center
+
+
+  div.container.row.slide11-principal
+    div.c100-s.c50-m.c25-l
+      img(src="./images/evo.jpg", alt="", id="punto")
+      p.slide11-principal-txt Si quiero reivindicaciones, voto al Candidato que signifique reivindicaciones.
+    div.c100-s.c50-m.c25-l
+      img(src="./images/cristina.jpg", alt="")
+      p.slide11-principal-txt Si quiero continuidad, voto al Candidato que signifique continuidad.
+    div.c100-s.c50-m.c25-l.slide11-3
+      img(src="./images/maduro.jpg", alt="")
+      p.slide11-principal-txt Si quiero nacionalismo populista, voto al Candidato que signifique nacionalismo populista
+    div.c100-s.c50-m.c25-l.slide11-4
+      img(src="./images/santos.jpg", alt="")
+      p.slide11-principal-txt Y si quiero sensatez  y seguridad, voto al Candidato que signifique sensatez y seguridad.
+  
+    
+
+  div.container.row.slide11-txt-1
+    +lista
+    div.c100-s.c50-l.slide11-txtDoble.slide11-dual-5
+      p El mundo simbólico no es visible en lo que los proyectos de país 
+        span son
+    div.c100-s.c50-l.slide11-txtDoble.slide11-dual-6
+      p ...sino en lo que los proyectos de país 
+        span significan
+
+  div.container.row.slide11-txt-2
+    +lista
+    div.c100-s.c50-l.slide11-txtDoble.slide11-dual-5
+      p El significado de un proyecto de país no reside simplemente en sus propuestas materiales, independientemente de la necesidad y justicia que manifiesten.
+    div.c100-s.c50-l.slide11-txtDoble.slide11-dual-6
+      p Porque el significado se alimenta de mucho más de lo que se puede ver, oír y tocar.
+        br
+        |Hablamos de esperanza, de percepciones, evocaciones, fantasías y sentimientos. 
+        br
+        |Y eso es expresado por el Candidato y sus símbolos.
+
+  div.container.row.slide11-txt-3
+    +lista
+    div.c100-s.c50-l.slide11-txtDoble.slide11-dual-5
+      p Hoy, el ciudadano promedio latinoamericano sustenta su adhesión o su voto en los códigos de poder que sus líderes simbolizan, más aun que en el proyecto político que representan.
+    div.c100-s.c50-l.slide11-txtDoble.slide11-dual-6
+      p Lo que explica que a una mayor significación del líder, mayor nivel de voto o de adhesión al proyecto que encarna.
+
+

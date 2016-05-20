@@ -28,3 +28,36 @@
     font-size: 2.8rem;
   }
 }
+
+.txt-xs{
+  font-size: 1rem;
+}
+.txt-s{
+  font-size: 1.2rem;
+}
+.txt-m{
+  font-size: 1.5rem;
+}
+.txt-l{
+  font-size: 1.8rem;
+}
+.txt-xl{
+  font-size: 2.1rem;
+}
+@include respond-to(l){
+  .txt-xs{
+    font-size: 1.2rem;
+  }
+  .txt-s{
+    font-size: 1.5rem;
+  }
+  .txt-m{
+    font-size: 2rem;
+  }
+  .txt-l{
+    font-size: 2.5rem;
+  }
+  .txt-xl{
+    font-size: 3.5rem;
+  }
+}

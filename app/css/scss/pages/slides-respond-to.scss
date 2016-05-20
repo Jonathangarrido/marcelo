@@ -1,4 +1,41 @@
+@include respond-to(m){
+  .slide10{
+    &-1{
+      order:1;
+      padding-right: 1rem;
+    }
+    &-2{
+      order:2;
+    }
+    &-4{
+      padding-left: 1rem;
+    }
+    &-dual{
+      p{
+        position: relative;
+      }
+      &-izq, &-der{
+        flex-direction: column;
+        p{
+          color: #fff;
+          width: 100%;
+          padding: 0 1rem;
+        }
+      }
+
+    }
+
+  }
+}
 @include respond-to(l){
+  .slide1{
+    h1{
+      font-size: 2.8rem;
+    }
+    span{
+      font-size: 1.5rem;
+    }
+  }
 
   .slide2{
     background-image: url('#{$image-dir}/fondo-politicos.jpg');
@@ -12,7 +49,7 @@
     }
     h2{
       text-align: center;
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
     .list{
       flex-direction: row;
@@ -26,8 +63,7 @@
   }
 
   .slide4{
-    padding: 0;
-    height: 90rem;
+    padding: 4rem 0 10rem;
     background-image: url('#{$image-dir}/fondo-semiotica.jpg');
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -39,6 +75,12 @@
     &-1{
       opacity: 0;
       transition: $animation;
+      span{
+        margin-bottom: 2.5rem;
+      }
+      p{
+        margin-bottom: .5rem;
+      }
       div:first-child{
         padding-right: 2rem;
       }
@@ -111,9 +153,10 @@
       justify-content: space-between;
       flex-direction: row;
       p{
-        width: 14rem;
+        padding: 0 3rem;
+        width: 18rem;
         height: 100vh;
-        padding: 0 2rem 0;
+        text-align: left;
         transition: $animation;
       }
       &-left{
@@ -122,6 +165,159 @@
       &-right{
         margin-right: -50%;
       }
+      & p:last-child{
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .slide7{
+    padding: 0;
+    height: 100vh;
+  }
+
+  .slide8{
+    background-color: #fff;
+    padding: 0;
+    height: 200vh;
+    z-index: -1;
+    transition: $animation;
+    div{
+      width: 100vw;
+      position: fixed;
+      top: 50%;
+      left: 0;
+      margin-top: -6rem;
+      padding: 0 5rem;
+      text-align: center;
+    }
+    p{
+      width: auto;
+    }
+    &-1{
+      transition: $animation;
+      opacity: 0;
+    }
+  }
+
+  .slide9{
+    padding: 10rem 0 0;
+    &-img{
+      padding-top: 8rem;
+      &-txt{
+        $varmm : 35rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: $varmm;
+        margin-left: -1 * $varmm/2;
+      }
+    }
+  }
+
+  .slide10{
+    &-1{
+      padding: 0 8rem;
+    }
+    &-4{
+      padding: 0 8rem;
+    }
+    &-separadores{
+      div{
+        padding: 15rem 0;
+      }
+    }
+    &-img{
+      height: 100vh;
+    }
+    &-dual{
+      z-index: -1;
+      height: 120vh;
+      &>div{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+      }
+      p{
+        top: 3rem;
+        position: absolute;
+      }
+      &-izq,&-der{
+        flex-direction: row;
+      }
+      &-izq{
+        p{
+          width: 10rem;
+        }
+      }
+      &-der{
+        p{
+          width: 10rem;
+          color: #000;
+        }
+      }
+    }
+  }
+
+
+  .slide11{
+    padding: 15rem 0 ;
+    height: 150rem;
+    &>div{
+      padding: 0 0 2rem;
+      position: relative;
+    }
+    &>div{
+      background-color: #fff;
+    }
+    &>div:nth-child(even){
+      background-color: #fff;
+    }
+    &-dual-3{
+      order: 3;
+    }
+    &-dual-4{
+      order: 4;
+    }
+    &-dual-5{
+      order: 5;
+    } 
+
+    &-principal{
+      z-index: 2!important;
+    }
+    &-txt-1{
+      margin-top: 45rem;
+      z-index: 4!important;
+    }
+    &-txt-2{
+      margin-top: 73rem;
+      z-index: 6!important;
+    }
+    &-txt-3{
+      margin-top: 100rem;
+      z-index: 8!important;
+    }
+  }
+
+  .slide12{
+    article{
+      height: 100vh;
+    }
+  }
+
+  .slide13{
+    &-mano{
+      padding: 0;
+      height: 100vh;
+    }
+    &-img{
+      height: 20rem;
+    }
+    p{
+      height: 10rem;
     }
   }
 }
@@ -134,4 +330,21 @@
 }
 .slide-right{
   margin-right: 0;
+}
+.bg-slide8{
+  background-color: #228E6A; // verde agua
+}
+.zIndex{
+  z-index: $index-2;
+}
+.stiky,.stiky2{
+  position: fixed!important;
+  top: 8rem;
+  left: 0;
+  right: 0;
+}
+.stiky2{
+  z-index: 4!important;
+  margin-top: 0;
+  top: calc(8rem + 62%);
 }

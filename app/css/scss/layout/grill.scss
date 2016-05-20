@@ -1,4 +1,4 @@
-$cols: 20 25 33 50 100;
+$cols: 20 25 33 45 50 55 100;
 
 @mixin columnas($pantalla){
   @each $col in $cols{
@@ -17,7 +17,7 @@ $cols: 20 25 33 50 100;
   }
 }
 
-$incluir-hidden-visible : false;
+$incluir-hidden-visible : true;
 
 @if $incluir-grid == true{
   /*------------------------------------
