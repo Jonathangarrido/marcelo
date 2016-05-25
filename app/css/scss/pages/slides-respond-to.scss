@@ -125,6 +125,8 @@
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    height: 150rem;
     p{
       font-size: 1.4rem;
     }
@@ -132,6 +134,7 @@
       padding: 15rem 1rem;
     }
     &-1{
+      margin-top: 4rem;
       justify-content: flex-end;
       opacity: 0;
       transition: $animation;
@@ -141,7 +144,7 @@
       }
     }
     &-2{
-      margin-top: 10rem;
+      margin-top: 15rem;
       opacity: 0;
       transition: $animation;
       p{
@@ -157,13 +160,15 @@
         width: 18rem;
         height: 100vh;
         text-align: left;
-        transition: $animation;
+        transition: all .3s ease-out;
+        position: fixed;
+        top: 0;
       }
       &-left{
-        margin-left: -50%;
+        left: -50%;
       }
       &-right{
-        margin-right: -50%;
+        right: -50%;
       }
       & p:last-child{
         padding-bottom: 0;
@@ -173,7 +178,7 @@
 
   .slide7{
     padding: 0;
-    height: 100vh;
+    height: 120vh;
   }
 
   .slide8{
@@ -223,9 +228,8 @@
       padding: 0 8rem;
     }
     &-separadores{
-      div{
-        padding: 15rem 0;
-      }
+      padding: 0;
+      height: 100vh;
     }
     &-img{
       height: 100vh;
@@ -233,6 +237,7 @@
     &-dual{
       z-index: -1;
       height: 120vh;
+      background-color: #070f36;
       &>div{
         height: 100vh;
         position: fixed;
@@ -249,11 +254,13 @@
       }
       &-izq{
         p{
+          margin-left: 2vw;
           width: 10rem;
         }
       }
       &-der{
         p{
+          margin-right: 2vw;
           width: 10rem;
           color: #000;
         }
@@ -265,8 +272,12 @@
   .slide11{
     padding: 15rem 0 ;
     height: 150rem;
+    p{
+      padding: .5rem 1rem;
+      margin: 0 ;
+    }
     &>div{
-      padding: 0 0 2rem;
+      padding: 1rem 0 3rem;
       position: relative;
     }
     &>div{
@@ -284,27 +295,32 @@
     &-dual-5{
       order: 5;
     } 
-
+    
+    
     &-principal{
       z-index: 2!important;
     }
     &-txt-1{
       margin-top: 45rem;
-      z-index: 4!important;
+      z-index: 4;
     }
     &-txt-2{
-      margin-top: 73rem;
-      z-index: 6!important;
+      margin-top: 65rem;
+      z-index: 6;
     }
     &-txt-3{
-      margin-top: 100rem;
-      z-index: 8!important;
+      margin-top: 85rem;
+      z-index: 8;
     }
   }
 
   .slide12{
+    padding: 0;
     article{
       height: 100vh;
+    }
+    h3{
+      font-size: 4.5rem;
     }
   }
 
@@ -326,10 +342,10 @@
   opacity: 1;
 }
 .slide-left{
-  margin-left: 0;
+  left: 0;
 }
 .slide-right{
-  margin-right: 0;
+  right: 0;
 }
 .bg-slide8{
   background-color: #228E6A; // verde agua

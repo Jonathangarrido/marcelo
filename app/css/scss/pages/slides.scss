@@ -263,8 +263,10 @@
   }
   &-separadores{
     text-align: center;
-    div{
-      padding: 10rem 0;
+    background-color: #070f36;
+    padding: 5rem 0;
+    p{
+      margin-bottom: 0;
     }
   }
   &-img{
@@ -306,7 +308,10 @@
     }
   }
   &-fin{
-    background-color: #000E4D;//azulmarino
+    background-color: #070f36;//azulmarino
+    p{
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -362,21 +367,22 @@
 .slide12{
   background-color: #024C9D; //celesteazulado
   text-align: center;
+  padding: 5rem 0;
   h3{
     font-family: $basefont;
     color: #FBB534; //amarillo anaranjado
     margin: 0 0 2rem;
+    font-size: 2.1rem;
   }
   p{
     margin-bottom: 1rem;
   }
   article{
-    padding: 8rem 0 4rem;
     flex-direction: column;
+    
   }
-  article:last-child{
-    padding: 4rem 0 8rem; 
-
+  &-2{
+    background-color: #033f81;
   }
 
 }
