@@ -8,26 +8,47 @@
 
 .slide1{
   background-color: $color-base;
+  background-image: url('#{$image-dir}/marcelo-small.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  align-items: flex-end;
   &>div{
-    align-items: center;
-  }
-  .imagen{
-    width: 15rem;
+    background-color: rgba(#000,.5);
+    padding-top: .5rem;
   }
   h1{
     font-family: $basefont;
-    margin-left: 1rem;
-    font-size: 2rem;
-    font-weight: 400;
+    line-height: 1;
+  }
+  .txt{
+    &-name{
+      color: #fff;
+      font-size: 2rem;
+    }
+    &-slogan{
+      margin: .5rem 0;
+      line-height: .8;
+      font-size: 1.8rem;
+    }
+    &-frase{
+      font-size: 1.3rem;
+    }
+    &-frase2{
+      font-size: 1rem;
+    }
   }
   span{
-    font-weight: 400;
-    line-height: 1;
+    color: orange;
+    font-size: 1.8rem;
+  }
+  a.mail{
+    color: #fff;
+    font-size: 1rem;
+    margin: .5rem 0;
     display: block;
-    font-size: 1.2rem;
-    &:first-child{
-      margin-top: .5rem;
-    }
   }
 }
 
@@ -178,6 +199,9 @@
   span{
     color: #FDE265//amarillo
   } 
+  .txt-big{
+    font-size: 2.3rem;
+  }
 }
 
 .slide8{
@@ -473,5 +497,16 @@
     .slide13-img{
       background-image: url('#{$image-dir}/mano-siete.png');
     }
+  }
+}
+
+.pie{
+  position: relative;
+  z-index: $index-4;
+  background-color: $color-base;
+  padding: 2rem 0;
+  a{
+    color: #fff;
+    font-size: 1rem;
   }
 }

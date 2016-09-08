@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     stylish = require('jshint-stylish'),
     sourcemaps = require('gulp-sourcemaps'),
-    jade = require('gulp-jade');
+    jade = require('gulp-jade'),
+    uglify = require('gulp-uglify');
 
 // Servidor web de desarrollo
 gulp.task('server', function(){
@@ -31,9 +32,12 @@ gulp.task('html', function() {
 
 // Busca errores en el JS y nos los muestra por pantalla
 gulp.task('jshint', function() {
-  return gulp.src('./app/js/**/*.js')
+  return gulp.src('./app/js/app.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(uglify())
+    .pipe(concat('./app.min.js'))
+    .pipe(gulp.dest('./app/js/'))
     .pipe(connect.reload());
 });
 
@@ -41,12 +45,44 @@ gulp.task('jshint', function() {
 gulp.task('css', function() {
   gulp.src('./app/css/scss/main.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))// compact | compressed
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))// compact | compressed
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(sourcemaps.write())
     .pipe(concat('./main.css'))
     .pipe(gulp.dest('./app/css'))
     .pipe(connect.reload());
+});
+
+
+
+
+// comprimido
+gulp.task('server-min', function(){
+  connect.server({
+    root: './app',
+    port: 8585
+  });
+})
+gulp.task('html-min', function() {
+  gulp.src('./app/templates/index.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('./app/'))
+});
+gulp.task('js-min', function() {
+  return gulp.src([
+    './app/lib/zepto/zepto.min.js',
+    './app/js/app.js'
+    ])
+    .pipe(uglify())
+    .pipe(concat('./app.min.js'))
+    .pipe(gulp.dest('./app/js/'));
+});
+gulp.task('css-min', function() {
+  gulp.src('./app/css/scss/main.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))// compact | compressed
+    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+    .pipe(concat('./main.min.css'))
+    .pipe(gulp.dest('./app/css'))
 });
 
 // Vigila cambios que se produzcan en el código
@@ -58,3 +94,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['server','watch']);
+gulp.task('build', ['server-min','html-min','js-min','css-min']);

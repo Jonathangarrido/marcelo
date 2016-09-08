@@ -1,4 +1,25 @@
 @include respond-to(m){
+  .slide1{
+    .txt{
+      &-name{
+        font-size: 3rem;
+      }
+      &-slogan{
+        margin: 1rem 0;
+        line-height: .8;
+        font-size: 4rem;
+      }
+      &-frase{
+        font-size: 2.3rem;
+      }
+      &-frase2{
+        font-size: 1.7rem;
+      }
+    }
+    span{
+      font-size: 4rem;
+    }
+  }
   .slide10{
     &-1{
       order:1;
@@ -29,11 +50,37 @@
 }
 @include respond-to(l){
   .slide1{
-    h1{
-      font-size: 2.8rem;
+    height: 100vh;
+    background-image: url('#{$image-dir}/marcelo.jpg');
+    align-items: center;
+    &>div{
+      background-color: transparent;
+      padding-top: 0;
+    }
+    .txt{
+      &-name{
+        font-size: 4rem;
+        color: #000;
+      }
+      &-slogan{
+        margin: 4rem 0;
+        line-height: .8;
+        font-size: 12rem;
+      }
+      &-frase{
+        font-size: 2.3rem;
+      }
+      &-frase2{
+        font-size: 1.7rem;
+      }
     }
     span{
+      display: block;
+      font-size: 5.5rem;
+    }
+    a.mail{
       font-size: 1.5rem;
+      margin: 3rem 0 0;
     }
   }
 
@@ -179,6 +226,9 @@
   .slide7{
     padding: 0;
     height: 120vh;
+    .txt-big{
+      font-size: 3.8rem;
+    }
   }
 
   .slide8{
@@ -334,6 +384,11 @@
     }
     p{
       height: 10rem;
+    }
+  }
+  .pie{
+    a{
+      font-size: 1.5rem;
     }
   }
 }

@@ -110,7 +110,7 @@
       }
 
 
-      if(wScroll > $('.slide11').offset().top + $(window).height()/.94){
+      if(wScroll > $('.slide11').offset().top + $(window).height()/0.94){
         $('.slide11-txt-2').addClass('stiky2');
         $('.slide11-txt-2').css('top',posit);
       }else{
@@ -118,7 +118,7 @@
         $('.slide11-txt-2').css('top',0);
       }
 
-      if(wScroll > $('.slide11').offset().top + $(window).height()/.665){
+      if(wScroll > $('.slide11').offset().top + $(window).height()/0.665){
         $('.slide11-txt-3').addClass('stiky2');
         $('.slide11-txt-3').css('top',posit);
       }else{
