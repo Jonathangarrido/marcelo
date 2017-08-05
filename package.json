@@ -4,13 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Jonathangarrido/marcelo"
-  },
-  "author": "",
+  "repository": "https://github.com/Jonathangarrido/marcelo",
+  "author": "jonathan garrido <jonathan.garrido1988@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Jonathangarrido/marcelo/issues"
