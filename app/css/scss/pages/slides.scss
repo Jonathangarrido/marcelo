@@ -8,22 +8,25 @@
 
 .slide1{
   background-color: $color-base;
-  background-image: url('#{$image-dir}/marcelo-small.jpg');
+  background-image: url('#{$image-dir}/marcelo-2.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   background-size: cover;
+  width: 100vw;
   height: 100%;
   text-align: center;
   align-items: flex-end;
   &>div{
     background-color: rgba(#000,.5);
     padding-top: .5rem;
+    width: 100vw;
   }
   h1{
     font-family: $basefont;
     line-height: 1;
   }
   .txt{
+    width: 100vw;
     &-name{
       color: #fff;
       font-size: 2rem;
@@ -77,6 +80,7 @@
   padding: 5rem 1rem;
   p{
     font-family: $altfont ;
+    font-size: 2rem;
     &:not(:last-child){
       margin-bottom: 3rem;
     }

@@ -51,13 +51,27 @@
 @include respond-to(l){
   .slide1{
     height: 100vh;
-    background-image: url('#{$image-dir}/marcelo.jpg');
+    background-image: url('#{$image-dir}/marcelo-2.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
     align-items: center;
     &>div{
       background-color: transparent;
       padding-top: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100vw;
+    }
+    &-jpg{
+      min-width: 395px;
+    }
+    &-txt{
+      width: 100%;
+      padding: 0 1rem;
     }
     .txt{
+      width: 100%;
       &-name{
         font-size: 4rem;
         color: #000;
@@ -85,7 +99,7 @@
   }
 
   .slide2{
-    background-image: url('#{$image-dir}/fondo-politicos.jpg');
+    background-image: url('#{$image-dir}/fondo-politicos-2.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
